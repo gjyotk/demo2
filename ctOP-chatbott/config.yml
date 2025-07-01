@@ -1,0 +1,255 @@
+# Rasa configuration file.
+
+recipe: default.v1
+
+# Language setting for NLU
+language: en
+
+# Unique identifier for this assistant project
+# Replace this default value with your own unique assistant name for deployment
+assistant_id: 20250531-104328-grizzled-vector
+
+log_level: DEBUG
+# NLU pipeline configuration; committed one
+# pipeline:
+#   - name: WhitespaceTokenizer
+#   - name: RegexFeaturizer
+#     case_sensitive: false
+#   - name: LexicalSyntacticFeaturizer
+#   - name: LanguageModelFeaturizer
+#     model_name: "bert"
+#     model_weights: "bert-base-uncased"
+#   - name: DIETClassifier
+#     hidden_layers_sizes:
+#       text: [64, 32]
+#     dropout_rate: 0.75
+#     epochs: 60
+#     batch_size: 32
+#     early_stopping: true
+#     patience: 15
+#     monitor: val_f1
+#     evaluate_on_number_of_examples: 600
+#     evaluate_every_number_of_epochs: 1
+#     tensorboard_log_directory: "./tb_logs8"
+#     tensorboard_log_level: "epoch"
+#     random_seed: 42
+#     learning_rate: 0.0004
+#     l2_regularization: 0.35
+#     entity_recognition: true
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 70
+#     constrain_similarities: true
+#   - name: FallbackClassifier
+#     threshold: 0.4
+#     ambiguity_threshold: 0.1
+
+# # Policy configuration for dialogue management
+# policies:
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: TEDPolicy
+#     max_history: 3
+#     epochs: 60
+#     batch_size: 16
+#     return_diagnostic_data: true
+#     dropout_rate: 0.3
+#     learning_rate: 0.001
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 3
+#     epochs: 40
+#     dropout_rate: 0.3
+
+
+# aug pipeline - 1
+# pipeline:
+#   - name: WhitespaceTokenizer
+#   - name: RegexFeaturizer
+#     case_sensitive: false
+#   - name: LexicalSyntacticFeaturizer
+#   - name: LanguageModelFeaturizer
+#     model_name: "bert"
+#     model_weights: "bert-base-uncased"
+#     # max_sequence_length: 512
+#     # model_cache_dir: "./cache"
+#   - name: DIETClassifier
+#     hidden_layers_sizes:
+#       text: [128, 64]
+#     dropout_rate: 0.5
+#     epochs: 60 
+#     batch_size: 64
+#     early_stopping: true
+#     patience: 20
+#     # monitor: val_f1
+#     # evaluate_on_number_of_examples: 800
+#     # evaluate_every_number_of_epochs: 5
+#     tensorboard_log_directory: "./tb_logs9"
+#     tensorboard_log_level: "epoch"
+#     random_seed: 42
+#     learning_rate: 0.0008
+#     l2_regularization: 0.01
+#     entity_recognition: true
+#     weight_sparsity: 0.8
+#     BILOU_flag: true
+#     # cross_validation_folds: 5
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 100
+#     constrain_similarities: true
+#     batch_size: 64
+#     learning_rate: 0.001
+#     dropout_rate: 0.3
+#   - name: FallbackClassifier
+#     threshold: 0.3
+#     ambiguity_threshold: 0.1
+
+# # Policy configuration
+# policies:
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     batch_size: 32
+#     return_diagnostic_data: true
+#     dropout_rate: 0.2
+#     learning_rate: 0.001
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 60
+#     dropout_rate: 0.2
+#     learning_rate: 0.001
+
+
+# can work and improve this
+# pipeline:
+#   - name: WhitespaceTokenizer
+#   - name: RegexFeaturizer
+#     case_sensitive: false
+#   - name: LexicalSyntacticFeaturizer
+#   # Removed CountVectorsFeaturizers to prevent feature interference with BERT
+#   - name: LanguageModelFeaturizer
+#     model_name: "bert"
+#     model_weights: "bert-base-uncased"
+#     trainable: true
+#     fine_tuning_epochs: 2
+#     learning_rate: 3e-5  
+#     pooling: "mean"
+#     optimizer_name: "AdamW"
+#     layerwise_decay: 0.95
+#     # Add noise for robustness
+#     dropout_rate: 0.1
+#   - name: DIETClassifier
+#     batch_strategy: balanced
+#     hidden_layers_sizes:
+#       text: [256, 128] 
+#     dropout_rate: 0.3       
+#     use_mc_dropout: true
+#     epochs: 60          
+#     batch_size: 16        
+#     early_stopping: true
+#     patience: 5             
+#     tensorboard_log_directory: "./tb_logs_production"
+#     tensorboard_log_level: "batch"
+#     random_seed: 42
+#     learning_rate: 0.0003   
+#     optimizer_name: "Adam"
+#     l2_regularization: 0.05 
+#     label_smoothing: 0.05  
+#     entity_recognition: true
+#     loss_type: "cross_entropy"
+#     similarity_type: "inner"
+#     BILOU_flag: true
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 40      
+#     constrain_similarities: true
+#     learning_rate: 0.0005
+#   - name: FallbackClassifier
+#     threshold: 0.5        
+#     ambiguity_threshold: 0.2
+
+# # Policy configuration
+# policies:
+#   - name: RulePolicy
+#     core_fallback_threshold: 0.4
+#     core_fallback_action_name: "action_handle_escalated_fallback"
+#     enable_fallback_prediction: true
+#   - name: MemoizationPolicy
+#   - name: TEDPolicy
+#     hidden_layers_sizes:
+#       text: [256, 128]
+#     epochs: 40             
+#     dropout_rate: 0.3    
+#     learning_rate: 0.0005  
+#     batch_size: 16
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 3     
+#     epochs: 40           
+#     dropout_rate: 0.3     
+#     learning_rate: 0.0008 
+
+
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+    case_sensitive: false
+  - name: LexicalSyntacticFeaturizer
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "bert-base-uncased"
+    trainable: true
+    fine_tuning_epochs: 2
+    learning_rate: 3e-5
+    pooling: "mean"
+    optimizer_name: "AdamW"
+    layerwise_decay: 0.9
+  - name: DIETClassifier
+    batch_strategy: balanced
+    hidden_layers_sizes:
+      text: [128, 128] 
+    dropout_rate: 0.5
+    use_mc_dropout: true
+    epochs: 80
+    batch_size: 32
+    early_stopping: true
+    patience: 8
+    tensorboard_log_directory: "./tb_logs2"
+    tensorboard_log_level: "batch"
+    random_seed: 42
+    learning_rate: 0.0005
+    optimizer_name: "Adam"
+    l2_regularization: 0.15
+    label_smoothing: 0.15
+    entity_recognition: true
+    loss_type: "cross_entropy"
+    similarity_type: "inner"
+    BILOU_flag: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 50
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.4
+    ambiguity_threshold: 0.1
+
+# Policy configuration
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_handle_escalated_fallback"
+    enable_fallback_prediction: true
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    hidden_layers_sizes:
+      text: [256, 128]
+    epochs: 50
+    return_diagnostic_data: true
+    dropout_rate: 0.4
+    learning_rate: 0.0003
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 60
+    dropout_rate: 0.2
+    learning_rate: 0.001

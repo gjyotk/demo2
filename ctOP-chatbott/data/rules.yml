@@ -1,0 +1,301 @@
+version: "3.1"
+# Rules defined for all intents
+rules:
+# - rule: Greet
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+
+- rule: Who are you
+  steps:
+    - intent: whoareyou
+    - action: utter_iam
+
+- rule: Greet and ask
+  steps:
+    - intent: greet_ask
+    - action: utter_greet_ask
+
+- rule: I'm good
+  steps:
+    - intent: im_good
+    - action: utter_positive
+
+- rule: Goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Affirm
+  steps:
+    - intent: affirm
+    - action: utter_positive
+
+- rule: Deny
+  steps:
+    - intent: deny
+    - action: utter_no_problem
+
+# FAQs
+- rule: What is ctOP?
+  steps:
+    - intent: what_is_ctOP
+    - action: utter_about_ctOP
+    - action: action_recommend_faqs
+
+- rule: About SCRC
+  steps:
+    - intent: about_scrc
+    - action: utter_about_scrc
+    - action: action_recommend_faqs
+
+- rule: About IIITH
+  steps:
+    - intent: about_iiith
+    - action: utter_iiith
+    - action: action_recommend_faqs
+
+- rule: About OM2M
+  steps:
+    - intent: about_om2m
+    - action: utter_om2m
+    - action: action_recommend_faqs
+
+- rule: About OneM2M
+  steps:
+    - intent: about_onem2m
+    - action: utter_onem2m
+    - action: action_recommend_faqs
+
+- rule: Features
+  steps:
+    - intent: features
+    - action: utter_features
+    - action: action_recommend_faqs
+
+- rule: Contact admin
+  steps:
+    - intent: contact_admin
+    - action: utter_contact_support
+    - action: action_recommend_faqs
+
+- rule: Is ctOP paid?
+  steps:
+    - intent: is_paid
+    - action: utter_paid
+    - action: action_recommend_faqs
+
+- rule: Onboarding
+  steps:
+    - intent: onboarding
+    - action: utter_onboard
+    - action: action_recommend_faqs
+
+- rule: Who can use ctOP
+  steps:
+    - intent: whocanuse
+    - action: utter_whocanuse
+    - action: action_recommend_faqs
+
+- rule: How secure is it
+  steps:
+    - intent: how_secure
+    - action: utter_secure
+    - action: action_recommend_faqs
+
+- rule: Ask analytics
+  steps:
+    - intent: ask_analytics
+    - action: utter_what_analytics
+    - action: action_recommend_faqs
+
+- rule: Domains
+  steps:
+    - intent: domains
+    - action: utter_domains
+    - action: action_recommend_faqs
+
+- rule: Demo
+  steps:
+    - intent: demo
+    - action: utter_demo
+    - action: action_recommend_faqs
+
+- rule: Alerts
+  steps:
+    - intent: alerts
+    - action: utter_alerts
+    - action: action_recommend_faqs
+
+- rule: User types
+  steps:
+    - intent: user_types
+    - action: utter_user_types
+    - action: action_recommend_faqs
+
+- rule: Add node
+  steps:
+    - intent: user.add_node
+    - action: utter_add_node
+    - action: action_recommend_faqs
+
+- rule: Add domain
+  steps:
+    - intent: user.add_domain
+    - action: utter_add_domain
+    - action: action_recommend_faqs
+
+- rule: Add sensor
+  steps:
+    - intent: user.add_sensor
+    - action: utter_add_sensor
+    - action: action_recommend_faqs
+
+- rule: What is domain
+  steps:
+    - intent: what_is_domain
+    - action: utter_what_is_domain
+    - action: action_recommend_faqs
+
+- rule: What is node
+  steps:
+    - intent: what_is_node
+    - action: utter_what_is_node
+    - action: action_recommend_faqs
+
+- rule: What is sensor type
+  steps:
+    - intent: what_is_sensortype
+    - action: utter_what_is_sensortype
+    - action: action_recommend_faqs
+
+- rule: Delete domain
+  steps:
+    - intent: user.delete_domain
+    - action: utter_delete_domain
+    - action: action_recommend_faqs
+
+- rule: Delete node
+  steps:
+    - intent: user.delete_node
+    - action: utter_delete_node
+    - action: action_recommend_faqs
+
+- rule: Delete sensor
+  steps:
+    - intent: user.delete_sensor
+    - action: utter_delete_sensor
+    - action: action_recommend_faqs
+
+- rule: Out of scope
+  steps:
+    - intent: oos
+    - action: utter_oos
+
+- rule: Ask limitations
+  steps:
+    - intent: ask_limitations
+    - action: utter_ask_limitations
+    # - action: action_recommend_faqs
+
+- rule: Vendor access
+  steps:
+    - intent: vendor_access
+    - action: utter_vendor_access
+    - action: action_recommend_faqs
+
+- rule: Vendor operator access
+  steps:
+    - intent: vendor_operator_access
+    - action: utter_vendor_operator_access
+    - action: action_recommend_faqs
+
+- rule: Admin access
+  steps:
+    - intent: admin_access
+    - action: utter_admin_access
+    - action: action_recommend_faqs
+
+- rule: Creation limit
+  steps:
+    - intent: creation_limit
+    - action: utter_creation_limit
+    # - action: action_recommend_faqs
+
+- rule: What is IUDX
+  steps:
+    - intent: what_is_iudx
+    - action: utter_ask_iudx
+    - action: action_recommend_faqs
+
+- rule: What are data models
+  steps:
+    - intent: what_are_data_models
+    - action: utter_ask_data_models
+    - action: action_recommend_faqs
+
+- rule: Edit domain
+  steps:
+    - intent: user.edit_domain
+    - action: utter_edit_domain
+    - action: action_recommend_faqs
+
+- rule: Edit node
+  steps:
+    - intent: user.edit_node
+    - action: utter_edit_node
+    - action: action_recommend_faqs
+
+- rule: Edit sensor
+  steps:
+    - intent: user.edit_sensor
+    - action: utter_edit_sensor
+    - action: action_recommend_faqs
+
+
+- rule: Handle fallback with escalation
+  steps:
+  - intent: nlu_fallback
+  - action: action_handle_escalated_fallback
+
+# Handle help menu selections
+- rule: Handle help menu selection
+  steps:
+  - intent: help_menu_selected
+  - action: action_handle_help_selection
+
+- rule: Greet and reset counter
+  steps:
+  - intent: greet
+  - action: action_reset_fallback_counter
+  - action: utter_greet
+
+# Rule: Trigger fallback when NLU confidence is low
+# - rule: Fallback when confidence is low
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_default
+
+# - rule: Handle fallback with escalation
+#   steps:
+#   - intent: nlu_fallback
+#   - action: action_handle_escalated_fallback
+
+# Reset counter on successful interactions
+# - rule: Reset fallback counter
+#   condition:
+#     - active_loop: null
+#     - not: intent == nlu_fallback
+#   actions:
+#     - slot_was_set:
+#       - consecutive_fallbacks: 0
+
+# - rule: Reset fallback counter
+#   steps:
+#     - intent: nlu_fallback
+#     - condition: |
+#         not tracker.active_loop and
+#         not tracker.latest_message.intent.get("name") == "nlu_fallback"
+#     - action: action_handle_escalated_fallback
+#     - action: slot_was_set
+#       consecutive_fallbacks: 0

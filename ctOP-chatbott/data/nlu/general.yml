@@ -1,0 +1,550 @@
+version: "3.1"
+# This file contains NLU examples for:
+# - Greetings
+# - Contacting admin
+# - Out-of-scope queries
+# - Affirmative responses
+# - Negative responses
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hi
+      - hello
+      - hii
+      - heyy
+      - hiii
+      - hlo
+      - hiiiii
+      - namaste
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - hey bot
+      - yo!
+      - hiya!
+      - greetings!
+      - hi chatbot
+      - helloo
+      - hi there
+      - hey dude
+      - good afternoon
+      - howdy
+      - sup
+      - what's good
+      - hello friend
+      - hi buddy
+      - hey mate
+      - good day
+      - nice to meet you
+      - pleasure to meet you
+      - aloha
+      - hola
+      - how do you do?
+      - lovely to see you
+      - what's up there?
+      - hello, are you awake?
+      - top of the morning to ya!
+      - good to be here
+      - pleased to connect
+      - general greetings
+      - just saying hi
+      - a warm hello
+      - greetings, digital friend
+      - what's happening?
+      - well hello there!
+  - intent: greet_ask
+    examples: |
+      - Hi, how are you?
+      - hi, how r u?
+      - what's up
+      - you okay?
+      - how have you been?
+      - Hey there, How are u?
+      - hello, how are you doing?
+      - Hey there! All well with you?
+      - Sup? You doing okay?
+      - Hiya, how are things on your end?
+      - Morning! How's everything?
+      - Evening! How've you been holding up?
+      - Hello! How are you these days?
+      - Hii, what about you?
+      - how are you doing?
+      - How you doin'
+      - What's going on? You good?
+      - Hey, you alright?
+      - Hi, how's everything going?
+      - Yo! How've you been?
+      - Good day! How are things?
+      - Hello there, how do you do?
+      - How's it going?
+      - How's life treating you?
+      - Everything okay with you?
+      - How's your day going so far?
+      - Hope you're doing well.
+      - Are you having a good day?
+      - How's your world?
+      - What's new with you?
+      - Anything exciting happening for you?
+      - How are you feeling today?
+      - What's the latest with you?
+      - Are you in good spirits?
+      - How's your current mood?
+      - Just checking in, how are you?
+      - How's everything shakin'?
+      - Hope all is well on your side!
+      - How's life been treating you lately?
+      - What's the good word?
+  - intent: im_good
+    examples: |
+      - i'm good
+      - i'm doing great
+      - im good, thanks
+      - i'm fine
+      - i am feeling great
+      - i feel good
+      - i'm well, thanks
+      - i am good
+      - i am fine
+      - pretty good
+      - feeling awesome today
+      - all good here
+      - doing well
+      - i'm okay
+      - i'm doing just fine
+      - i'm doing alright
+      - fine
+      - couldn't be better!
+      - i'm alright
+      - doing well, thank you
+      - going strong
+      - yes, im okay
+      - im doing fine
+      - im doing very well
+      - im well
+      - super good today
+      - i'm amazing
+      - peachy!
+      - everything's great
+      - fantastic
+      - wonderful
+      - excellent
+      - never been better
+      - i'm thriving
+      - life is good
+      - can't complain
+      - feeling really good
+      - couldn't ask for more
+      - I'm in top form
+      - all's well
+      - I'm feeling splendid
+      - I'm absolutely fine, thanks for asking
+      - Everything's going perfectly
+      - My day is going great
+      - Feeling energized and positive
+      - I'm feeling quite cheerful today
+  - intent: whoareyou
+    examples: |
+      - are you a bot?
+      - who are you?
+      - are you a human?
+      - what do you do?
+      - are you real?
+      - who made you
+      - who am i talking to?
+      - tell me, who are you?
+      - what can you do for me?
+      - how can you help me?
+      - am i talking to a bot?
+      - am i talking to a human?
+      - tell me who are you
+      - tell me about yourself?
+      - are you a person or a program?
+      - is this a human or a machine?
+      - can you tell me who you are?
+      - what's your role here?
+      - are you an ai assistant?
+      - who am i talking to right now?
+      - what are you made for?
+      - who am i even chatting with right now?
+      - what can you help me with?
+      - are you a chatbot?
+      - am i chatting with a real person?
+      - introduce yourself
+      - what kind of assistant are you?
+      - are you automated?
+      - what type of bot are you?
+      - tell me your capabilities
+      - describe yourself
+      - are you artificial intelligence?
+      - what is your purpose?
+      - are you a virtual assistant?
+      - explain who you are
+      - what's your identity?
+      - what's your function?
+      - who is operating this chat?
+      - are you programmed?
+      - what's your designation?
+      - what's your backstory?
+      - clarify your nature
+      - what's your official title?
+      - give me more information about yourself
+  - intent: contact_admin
+    examples: |
+      - i want to contact the admin
+      - Where do I drop an email for ctOP?
+      - what is the contact of the support?
+      - i want help connecting the admin
+      - Contact admin please.
+      - i want to mail the creator
+      - please give me the email of the admin
+      - what is the mailid of the admin
+      - contact admin
+      - message admin
+      - report issue
+      - contact support
+      - help desk
+      - support email
+      - admin email
+      - contact team
+      - report error
+      - mail admin
+      - talk to support
+      - help me contact the maintainer
+      - how can i report issues to admin?
+      - How do I contact ctOP support if I face issues?
+      - How do I contact ctOP admin if I face issues?
+      - how do i contact scrc?
+      - how do i get in touch with scrc team?
+      - how do i get in touch with smart city team?
+      - How do I get in touch with the Smart City team?
+      - Who do I contact for support?
+      - How can I reach the admin?
+      - how can a vendor contact the admin
+      - Is there an email for the support team?
+      - Can you provide the support contact details?
+      - I need help contacting the admin
+      - Where can I find the support email?
+      - can a vendor contact the team?
+      - I want to report a bug, who do I contact?
+      - How do I send a message to the CTOP admin?
+      - I want to talk to someone from SCRC
+      - Who handles support for CTOP?
+      - How can I reach customer support?
+      - I need to speak with an administrator.
+      - How can I reach out to the team responsible for this platform?
+      - I need to talk to someone about a serious problem.
+      - Can you provide me with the administrator's contact information?
+      - I'm looking for the admin's email address.
+  - intent: oos
+    examples: |
+      - What's the weather in New York today?
+      - Sing me a song about cats
+      - How do I bake chocolate chip cookies?
+      - Translate hello into French please
+      - Tell me a joke about programmers
+      - Who won the World Cup in 2018?
+      - buy me a chocolate today
+      - Play some music for me
+      - help me with my homework
+      - I'm so hungry
+      - you are crazy
+      - Who was Michael Jackson?
+      - you sound so bad
+      - what is my name?
+      - make idli for me
+      - I don't like sambar anymore
+      - Set an alarm for 7 AM
+      - Book me a flight to London
+      - Translate bread into German
+      - What's the stock price of Tesla right now?
+      - Show me pictures of puppies
+      - What is the meaning of life?
+      - Play some rock music for me
+      - Translate thank you into Spanish
+      - I can't eat anymore of sambar but I do like dosa
+      - help me write my essay
+      - who is god?
+      - hindi mai baat karo
+      - /.,';]\[009-]'`
+      - ???
+      - abhi na jaao chod kar ke dil abhi bhara nahi
+      - who made humans?
+      - recommend me some good psychology books
+      - my name is david eagleman
+      - how to remove stain from my shirt?
+      - Como se dice hello en frances?
+      - do you like jazz?
+      - where are you going?
+      - catch me if you can
+      - can you play a movie for me?
+      - who is the creator of this whole universe?
+      - qwerty keyboard layout
+      - random text here
+      - who is the president of india?
+      - what is the cost of one packet of blue lays?
+      - lol
+      - lmao
+      - ruhefjnkaosid
+      - >:<';'[]-0908432'
+      - help me understand linear algebra?
+      - Who won the Super Bowl in 2021?
+      - Do you like pineapple on pizza?
+      - What time is it in London right now?
+      - Can you recommend a good sci-fi novel?
+      - Tell me a joke about programmers
+      - What's the capital of Burkina Faso?
+      - idiot
+      - stupid
+      - garbage
+      - Tell me the plot of Inception
+      - random words here
+      - gibberish text
+      - blah blah blah
+      - nonsense characters
+      - which candidate did you vote for?
+      - How do I tie a Windsor knot?
+      - get me a bottle of water
+      - call Barack Obama for me
+      - Who painted the Mona Lisa?
+      - paint me a picture of mountains
+      - Summarize the main themes of 1984 by George Orwell
+      - What's your favorite color?
+      - What do you think about politics?
+      - What's your opinion on religion?
+      - What's your biggest fear?
+      - Tell me a bedtime story
+      - Solve this math equation for me
+      - Write my resume
+      - Plan my vacation
+      - 2+2=?
+      - Choose my outfit
+      - Tell me about the different types of clouds.
+      - What's the population of China?
+      - How do I change a tire?
+      - What's the capital of Canada?
+      - Explain the concept of gravity.
+      - Medical diagnosis help
+      - Legal advice needed
+      - what's your favorite movie?
+      - do you have a family?
+      - can you tell me a story?
+      - what are you doing right now?
+      - teach me calculus.
+      - tell me about space.
+      - what's the weather like?
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - yep
+      - yup
+      - sure
+      - okay
+      - ok
+      - alright
+      - right
+      - correct
+      - exactly
+      - absolutely
+      - definitely
+      - of course
+      - indeed
+      - affirmative
+      - positive
+      - that's right
+      - that's correct
+      - you're right
+      - agreed
+      - I agree
+      - sounds good
+      - perfect
+      - great
+      - good
+      - true
+      - yes please
+      - go ahead
+      - proceed
+      - continue
+      - confirm
+      - confirmed
+      - accept
+      - accepted
+      - approve
+      - approved
+      - for sure
+      - without a doubt
+      - I confirm
+      - I approve
+      - it is so
+      - by all means
+      - you bet
+      - sounds about right
+      - I understand
+      - got it
+      - roger that
+      - point taken
+      - that works
+      - I'm in
+      - positive, go ahead
+      - this is accurate
+      - absolutely correct
+      - I concur
+      - yes, that's what I meant
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - no way
+      - not really
+      - I don't think so
+      - negative
+      - never
+      - absolutely not
+      - definitely not
+      - not at all
+      - I disagree
+      - that's wrong
+      - incorrect
+      - false
+      - not true
+      - I don't agree
+      - I refuse
+      - decline
+      - reject
+      - no thanks
+      - not interested
+      - I don't want that
+      - that's not right
+      - not quite
+      - not exactly
+      - I don't believe so
+      - I doubt it
+      - unlikely
+      - impossible
+      - cancel
+      - stop
+      - don't
+      - won't
+      - can't
+      - shouldn't
+      - I'm not in favor
+      - it's not like that
+      - by no means
+      - absolutely no
+      - I decline
+      - I object
+      - that's incorrect
+      - negative, absolutely not
+      - I cannot
+      - I will not
+      - not this time
+      - perhaps not
+      - I am against it
+      - that's a no
+      - no, thank you
+      - I'm unable to do that
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - see you later
+      - talk to you later
+      - bye bye
+      - good bye
+      - farewell
+      - see ya
+      - catch you later
+      - until next time
+      - I'm leaving now
+      - I have to go
+      - that's all for now
+      - thanks and goodbye
+      - bye for now
+      - see you around
+      - take care
+      - I'm done chatting
+      - that's it for now
+      - end conversation
+      - exit chat
+      - quit conversation
+      - I'm going now
+      - gotta go
+      - leave chat
+      - byee
+      - byeee
+      - goodbyee
+      - cya
+      - see u later
+      - ttyl
+      - peace out
+      - adios
+      - au revoir
+      - cheers
+      - so long
+      - have a good one
+      - talk soon
+      - later
+      - cheerio
+      - good day to you
+      - I'm off
+      - closing out the chat
+      - end chat
+      - closing the conversation
+      - ending our discussion
+      - time to go
+      - closing this session
+      - signing off
+      - ending interaction
+      - goodnight
+      - have a nice day
+      - I'll be back later
+      - chat later
+
+
+
+- intent: navigate_to_node_analytics
+  examples: |
+    - I want to see node analytics
+    - Show me node analytics for [node1](node_name)
+    - Navigate to node analytics
+    - Take me to [sensor_node_01](node_name) analytics
+    - Open node analytics view
+    - Show analytics for node [node_01](node_name)
+    - I need to check node [monitoring_station_1](node_name) data
+    - Display node analytics for [station_a](node_name)
+    - Go to node analytics page
+    - Navigate me to node [sensor_01](node_name) analytics
+
+- intent: navigate_to_sensor_analytics
+  examples: |
+    - Show me sensor type analytics
+    - I want to see [air quality](sensor_type) sensor analytics
+    - Navigate to sensor analytics
+    - Take me to [weather monitoring](sensor_type) analytics
+    - Open sensor type analytics view
+    - Show analytics for [water quality](sensor_type) sensors
+    - I need [energy monitoring](sensor_type) analytics
+    - Display sensor analytics for [solar monitoring](sensor_type)
+    - Go to sensor type analytics page
+    - Navigate me to [crowd monitoring](sensor_type) sensor analytics
+
+- intent: list_nodes
+  examples: |
+    - What nodes are available?
+    - Show me all nodes
+    - List all nodes
+    - What sensor nodes do you have?
+    - Display nodes
+    - Show node list
+
+
+- intent: list_sensor_types
+  examples: |
+    - What sensor types are available?
+    - Show me all sensor types
+    - List sensor types
+    - What types of sensors do you have?
+    - Display sensor types

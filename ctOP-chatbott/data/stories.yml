@@ -1,0 +1,308 @@
+version: '3.1'
+
+stories:
+
+
+# intro
+  # - story: greet
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: whoareyou
+  #     - action: utter_iam
+
+  # - story: greet and ques
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+
+  - story: greet and ask
+    steps:
+      - intent: greet_ask
+      - action: utter_greet_ask
+      - intent: im_good
+      - action: utter_positive
+      - intent: whoareyou
+      - action: utter_iam
+
+  - story: bye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: affirm
+    steps:
+      - intent: affirm
+      - action: utter_positive
+
+  - story: deny
+    steps:
+      - intent: deny
+      - action: utter_no_problem
+# faqs
+  - story: about ctop
+    steps:
+      - intent: what_is_ctOP
+      - action: utter_about_ctOP
+      - action: action_recommend_faqs
+
+  - story: about scrc
+    steps:
+      - intent: about_scrc
+      - action: utter_about_scrc
+      - action: action_recommend_faqs
+
+  - story: about iiith
+    steps:
+      - intent: about_iiith
+      - action: utter_iiith
+      - action: action_recommend_faqs
+
+  - story: about om2m
+    steps:
+      - intent: about_om2m
+      - action: utter_om2m
+      - action: action_recommend_faqs
+
+  - story: about onem2m
+    steps:
+      - intent: about_onem2m
+      - action: utter_onem2m
+      - action: action_recommend_faqs
+
+
+  - story: features
+    steps:
+      - intent: features
+      - action: utter_features
+      - action: action_recommend_faqs
+
+  - story: contact support
+    steps:
+      - intent: contact_admin
+      - action: utter_contact_support
+      - action: action_recommend_faqs
+
+  - story: is paid
+    steps:
+      - intent: is_paid
+      - action: utter_paid
+      - action: action_recommend_faqs
+
+  - story: onboarding
+    steps:
+      - intent: onboarding
+      - action: utter_onboard
+      - action: action_recommend_faqs
+
+  - story: who can use
+    steps:
+      - intent: whocanuse
+      - action: utter_whocanuse
+      - action: action_recommend_faqs
+
+  - story: security
+    steps:
+      - intent: how_secure
+      - action: utter_secure
+      - action: action_recommend_faqs
+
+  - story: ask analytics
+    steps:
+      - intent: ask_analytics
+      - action: utter_what_analytics
+      - action: action_recommend_faqs
+
+  - story: domains
+    steps:
+      - intent: domains
+      - action: utter_domains
+      - action: action_recommend_faqs
+
+  - story: demo
+    steps:
+      - intent: demo
+      - action: utter_demo
+      - action: action_recommend_faqs
+
+  - story: alerts
+    steps:
+      - intent: alerts
+      - action: utter_alerts
+      - action: action_recommend_faqs
+
+  - story: user types
+    steps:
+      - intent: user_types
+      - action: utter_user_types
+      - action: action_recommend_faqs
+
+  - story: add node
+    steps:
+      - intent: user.add_node
+      - action: utter_add_node
+      - action: action_recommend_faqs
+
+  - story: add domain
+    steps:
+      - intent: user.add_domain
+      - action: utter_add_domain
+      - action: action_recommend_faqs
+
+  - story: add sensor
+    steps:
+      - intent: user.add_sensor
+      - action: utter_add_sensor
+      - action: action_recommend_faqs
+
+  - story: what is domain
+    steps:
+      - intent: what_is_domain
+      - action: utter_what_is_domain
+      - action: action_recommend_faqs
+
+  - story: what is node
+    steps:
+      - intent: what_is_node
+      - action: utter_what_is_node
+      - action: action_recommend_faqs
+
+  - story: what is sensor type
+    steps:
+      - intent: what_is_sensortype
+      - action: utter_what_is_sensortype
+      - action: action_recommend_faqs
+
+  - story: delete domain
+    steps:
+      - intent: user.delete_domain
+      - action: utter_delete_domain
+      - action: action_recommend_faqs
+
+  - story: delete node
+    steps:
+      - intent: user.delete_node
+      - action: utter_delete_node
+      - action: action_recommend_faqs
+
+  - story: delete sensor
+    steps:
+      - intent: user.delete_sensor
+      - action: utter_delete_sensor
+      - action: action_recommend_faqs
+
+  - story: oos
+    steps:
+      - intent: oos
+      - action: utter_oos
+
+  - story: ask_limitations
+    steps:
+      - intent: ask_limitations
+      - action: utter_ask_limitations
+      # - action: action_recommend_faqs
+  - story: vendor_access
+    steps:
+      - intent: vendor_access
+      - action: utter_vendor_access
+      - action: action_recommend_faqs
+  - story: vendor_operator_access
+    steps:
+      - intent: vendor_operator_access
+      - action: utter_vendor_operator_access
+      - action: action_recommend_faqs
+  - story: admin_access
+    steps:
+      - intent: admin_access
+      - action: utter_admin_access
+      - action: action_recommend_faqs
+  - story: creation_limit
+    steps:
+      - intent: creation_limit
+      - action: utter_creation_limit
+      # - action: action_recommend_faqs
+  - story: what_is_iudx
+    steps:
+      - intent: what_is_iudx
+      - action: utter_ask_iudx
+      - action: action_recommend_faqs
+  - story: what_are_data_models
+    steps:
+      - intent: what_are_data_models
+      - action: utter_ask_data_models
+      - action: action_recommend_faqs
+  - story: user.edit_domain
+    steps:
+      - intent: user.edit_domain
+      - action: utter_edit_domain
+      - action: action_recommend_faqs
+  - story: user.edit_node
+    steps:
+      - intent: user.edit_node
+      - action: utter_edit_node
+      - action: action_recommend_faqs
+  - story: edit_sensor
+    steps:
+      - intent: user.edit_sensor
+      - action: utter_edit_sensor
+      - action: action_recommend_faqs
+
+
+  - story: navigate to node analytics happy path
+    steps:
+    - intent: navigate_to_node_analytics
+      entities:
+      - node_name: "sensor_01"
+    - action: action_request_node_navigation_confirmation
+    - intent: confirm_navigation
+    - action: action_navigate_to_node_analytics
+
+  - story: navigate to node analytics without specific node
+    steps:
+    - intent: navigate_to_node_analytics
+    - action: action_request_node_selection
+    - intent: navigate_to_node_analytics
+      entities:
+      - node_name: "monitoring_station_1"
+    - action: action_request_node_navigation_confirmation
+    - intent: confirm_navigation
+    - action: action_navigate_to_node_analytics
+
+  - story: navigate to sensor analytics happy path
+    steps:
+    - intent: navigate_to_sensor_analytics
+      entities:
+      - sensor_type: "air quality"
+    - action: action_request_sensor_navigation_confirmation
+    - intent: confirm_navigation
+    - action: action_navigate_to_sensor_analytics
+
+  - story: navigate to sensor analytics without specific type
+    steps:
+    - intent: navigate_to_sensor_analytics
+    - action: action_request_sensor_type_selection
+    - intent: navigate_to_sensor_analytics
+      entities:
+      - sensor_type: "weather monitoring"
+    - action: action_request_sensor_navigation_confirmation
+    - intent: confirm_navigation
+    - action: action_navigate_to_sensor_analytics
+
+  - story: user denies navigation
+    steps:
+    - intent: navigate_to_node_analytics
+      entities:
+      - node_name: "sensor_01"
+    - action: action_request_node_navigation_confirmation
+    - intent: deny_navigation
+    - action: utter_navigation_cancelled
+
+  - story: list available nodes
+    steps:
+    - intent: list_nodes
+    - action: action_list_available_nodes
+
+  - story: list available sensor types
+    steps:
+    - intent: list_sensor_types
+    - action: action_list_available_sensor_types

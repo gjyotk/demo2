@@ -1,0 +1,340 @@
+version: "3.1"
+intents:
+  - greet
+  - greet_ask
+  - im_good
+  - nlu_fallback
+  - what_is_ctOP
+  - about_scrc
+  - about_iiith
+  - about_om2m
+  - about_onem2m
+  - contact_admin
+  - features
+  - is_paid
+  - onboarding
+  - whocanuse
+  - how_secure
+  - ask_analytics
+  - domains
+  - demo
+  - alerts
+  - user_types
+  - goodbye
+  - affirm
+  - deny
+  - oos
+  - whoareyou
+  - user.add_node
+  - user.add_domain
+  - user.add_sensor
+  - what_is_domain
+  - what_is_node
+  - what_is_sensortype
+  - user.delete_domain
+  - user.delete_node
+  - user.delete_sensor
+  - ask_limitations
+  - vendor_access
+  - vendor_operator_access
+  - admin_access
+  - creation_limit
+  - what_is_iudx
+  - what_are_data_models
+  - user.edit_domain
+  - user.edit_node
+  - user.edit_sensor
+  - help_menu_selected 
+  - navigate_to_node_analytics
+  - navigate_to_sensor_analytics
+  - list_nodes
+  - list_sensor_types
+
+responses:
+  utter_recommendations:
+    - text: "You might be interested in:"
+      buttons: []
+
+  utter_fallback_suggestions:
+    - text: "Here are some common questions:"
+      buttons:
+        - title: "What is ctOP?"
+          payload: "/what_is_ctOP"
+        - title: "How to add a sensor?"
+          payload: "/user.add_sensor"
+        - title: "What is SCRC?"
+          payload: "/about_scrc"
+        - title: "Is ctOP secure?"
+          payload: "/how_secure"
+
+  # utter_contact_fallback:
+  #   - text: "I'm still having trouble understanding. Please contact our support team at smartcityresearch@iiit.ac.in for assistance."
+
+# intro
+  utter_greet:
+    - text: "Hii! I'm a virtual assistant created by SCRC to help answer your questions. How can I assist you today?"
+      buttons:
+        - title: "What is ctOP?"
+          payload: "/what_is_ctOP"
+        - title: "Is ctOP paid?"
+          payload: "/is_paid"
+        - title: "Who can use ctOP?"
+          payload: "/whocanuse"
+
+  utter_iam:
+    - text: "I am a chatbot designed by SCRC to answer your queries. How can I assist you?"
+      buttons:
+        - title: "What is SCRC?"
+          payload: "/about_scrc"
+        - title: "What user roles are available in ctOP?"
+          payload: "/user_types"
+    - text: "I'm a virtual assistant created by SCRC to help answer your questions. How may I assist you today?"
+      buttons:
+        - title: "What are the key features of ctOP?"
+          payload: "/features"
+        - title: "Help me contact the Admin"
+          payload: "/contact_admin"
+
+  utter_greet_ask:
+    - text: "Hi, I'm good."
+    - text: "Hello, I'm doing good."
+
+  utter_positive:
+    - text: "That's good"
+    - text: "That's great"
+    - text: "Nice"
+
+# FAQs
+  utter_default:
+    - text: "Sorry, I didn't get that. Please try rephrasing."
+
+
+  utter_rephrase:
+    - text: "Sorry, I didn't get that. Can you please rephrase your question?"
+
+  utter_about_ctOP:
+    - text: "ctOP is a lightweight, oneM2M-based platform from Smart City Living Lab @IIIT Hyderabad. It integrates diverse IoT devices, simplifying management and optimizing urban services."
+    - text: "Developed by Smart City Living Lab (SCRC) at IIIT Hyderabad, ctOP is a oneM2M-based platform that simplifies smart city management by connecting diverse IoT systems for seamless interoperability and efficient service delivery."
+    - text: "ctOP, from Smart City Research Center at IIIT Hyderabad, is a scalable, oneM2M-based platform for integrating and orchestrating heterogeneous IoT devices and services, fostering vendor-neutral smart city solutions."
+
+  utter_about_scrc:
+    - text: "The Smart City Research Centre (SCRC) at IIIT-Hyderabad develops innovative solutions for urban challenges.  It integrates research, technology, and real-world testing in a Living Lab. SCRC developed ctOP for seamless IoT integration in smart cities. More details: https://smartcityresearch.iiit.ac.in/"
+
+    - text: "The Smart City Research Centre (SCRC) at IIIT-Hyderabad is a research hub creating smart city technologies. We collaborate with academia, government, and industry. SCRC's ctOP simplifies IoT device integration in urban environments. More details: https://smartcityresearch.iiit.ac.in/"
+
+    - text: "Located at IIIT-Hyderabad, SCRC drives real-world smart city innovations by blending research expertise with urban infrastructure and IoT devices. ctOP is a prime example, serving as a unified IoT solution that actively supports smartcity development. You can visit our website: https://smartcityresearch.iiit.ac.in/ for more details."
+
+  utter_iiith:
+    - text: "The International Institute of Information Technology (IIIT) Hyderabad, established in 1998, is a research-focused institute in Telangana. It is renowned for pioneering research and education in computer science, AI, robotics, data science, machine learning, and IoT for smart cities. The broader IIIT network comprises technical institutions across India."
+
+    - text: "IIIT refers to Indian Institute of Information Technology. IIIT (International Institute of Information Technology) Hyderabad is a research-driven institute known for pioneering work in data science, AI, computer vision, machine learning, IoT for smart cities and more. You can visit the website: https://ctop.iiit.ac.in/aboutusfor more details."
+
+  utter_om2m:
+    - text: "OM2M is an open-source, oneM2M-based platform by the Eclipse Foundation for M2M and IoT applications. It ensures interoperability across diverse IoT devices and systems through a standardized middleware, handling device registration, data management, and communication."
+    - text: "As a standards-compliant middleware framework, OM2M enables developers to build scalable and interoperable IoT solutions. Based on the oneM2M specification, it simplifies device integration, sensor data management, and M2M application creation by abstracting low-level communication protocols."
+    - text: "OM2M serves as a backbone for smart, interconnected systems by providing a standardized way to connect and manage IoT devices. It handles device communication, data storage, and access control, ensuring compatibility across different systems."
+
+  utter_onem2m:
+    - text: "oneM2M is a global standard developed by an international consortium to ensure M2M and IoT interoperability. It defines a common service layer for seamless communication between diverse IoT devices and platforms, regardless of manufacturer or network."
+    - text: "oneM2M standard addresses IoT ecosystem fragmentation by providing a unified framework for device registration, data exchange, security, and management, simplifying large-scale, multi-vendor IoT deployments."
+
+  utter_features:
+    - text: "ctOP acts as a central hub, connecting diverse smart city devices from various vendors for smooth data exchange and control. Its key features include:\n• oneM2M standard support \n• Unified visualization\n• Easy integration of new/legacy devices\n• Optimized urban service monitoring"
+    - text: "ctOP improves smart city infrastructure efficiency by streamlining IoT system integration. Key features are:\n• Lightweight and adaptable design\n• Interoperability among vendor devices\n• Unified management platform\n• Reduced system complexity"
+    - text: "ctOP functions as a versatile integration layer, enabling smart cities to seamlessly connect and manage IoT devices. Key features include:\n• oneM2M compliant communication\n• Harmonizing diverse device ecosystems\n• Simplified device onboarding\n• Centralized data collection"
+    - text: "ctOP is a lightweight oneM2M wrapper that simplifies IoT device integration in smart cities by ensuring interoperability across diverse systems. Key features are:\n• Centralized management\n• Simplified device onboarding\n• Reduced operational/integration costs\n• Enhanced oneM2M standard compliance"
+
+  utter_contact_support:
+    - text: "To contact the admin, please send an email to smartcityresearch@iiit.ac.in. Our team will respond to your inquiry promptly."
+
+  utter_paid:
+    - text: "ctOP uses a subscription-based model with role-specific features and secure access controls, ensuring a customized and secure experience for every team member."
+    - text: "ctOP operates on a subscription-based pricing system. The platform supports multiple user roles, each with unique capabilities and authentication mechanisms for a secure, personalized workflow."
+    - text: "ctOP follows a subscription model, offering access to features based on user roles. This enables structured permissions, secure logins, and personalized functionality."
+
+  utter_onboard:
+    - text: "To start onboarding, fill out the form on the About page by clicking the 'Fill your details' button. Once our admin team verifies your submission, your user credentials will be emailed to you."
+    - text: "Please complete the onboarding form from the About page's 'Fill your details' section. After administrative validation, your access credentials will be sent to your email address."
+    - text: "Onboarding begins by filling out the form accessible through the 'Fill your details' button on the About page. After admin approval, your login credentials will be emailed to you."
+
+  utter_whocanuse:
+    - text: "ctOP is a unified platform for urban stakeholders, such as city administrators and IoT vendors, to manage smart city operations. To join, please complete the onboarding form."
+    - text: "ctOP is a centralized, interoperable platform for government agencies and IoT companies to manage smart city services. To get started, please complete the onboarding form."
+
+  utter_secure:
+    - text: "ctOP prioritizes security and compliance, using oneM2M IoT standards, robust authorization, and role-based access control to ensure data confidentiality and integrity."
+    - text: "Security is foundational to ctOP. The platform uses oneM2M IoT standards, robust role-based authentication, authorization, and secure data exchanges to protect against unauthorized access."
+    - text: "ctOP employs comprehensive security, including oneM2M IoT standards, secure role-based authentication, access auditing, and strict identity verification, to maintain a trustworthy operating environment for all city services and stakeholders."
+
+  utter_what_analytics:
+    - text: "ctOP provides built-in analytics for monitoring data and analyzing trends. Dedicated dashboards at the node and sensor levels feature interactive graphs, charts, and tabular data for real-time analysis"
+    - text: "ctOP offers robust analytics with dashboards for real-time data visualization and trend analysis. These dashboards, available for both nodes and sensors, include interactive charts, graphs, and structured data tables."
+
+  utter_domains:
+    - text: "ctOP supports diverse smart city domains including air quality, water management, solar energy, energy monitoring, smart spaces, and public infrastructure (e.g., smart lamp-posts). Users can directly register compatible sensors and devices to domains"
+    - text: "ctOP enables onboarding of IoT devices and sensors across multiple domains like air quality, water quality, energy usage, and smart lighting. It ensures seamless integration and real-time monitoring for efficient urban management."
+
+  utter_demo:
+    - text: "You can request a platform demo by dropping a mail at smartcityresearch@iiit.ac.in and our team will contact you shortly."
+
+  utter_alerts:
+    - text: "ctOP features a comprehensive alert and notification system to promptly inform stakeholders of critical events and anomalies, enabling timely responses."
+    - text: "ctOP includes a robust notification feature that keeps users updated on system status, sensor readings, and critical information. Users receive in-platform alerts to monitor parameters and get automatic notifications when attention is needed."
+    - text: "ctOP's notification framework provides real-time updates on system performance, sensor data irregularities, and operational status to facilitate informed decision-making."
+
+  utter_user_types:
+    - text: "ctOP supports two user roles: Vendor and Vendor Operator. The Vendor Operator reports to the Vendor, with a system admin overseeing both and assigning distinct access privileges."
+    - text: "ctOP offers Vendor and Vendor Operator user roles, where the Vendor Operator reports to the Vendor. A system Admin manages both, providing separate access controls based on responsibilities."
+
+  utter_no_problem:
+    - text: "Okay, no problem! Let me know if you need help with anything else."
+
+  utter_add_domain:
+    - text: "Kindly visit Domains page to add a new domain"
+
+  utter_add_node:
+    - text: "Kindly visit Nodes page to add a new node"
+
+  utter_add_sensor:
+    - text: "Kindly visit Sensor Types page to add a new sensor type."
+
+  utter_what_is_domain:
+    - text: "A domain specifies the application area for which the sensors are being utilized, such as water quality, weather monitoring, or waste management."
+
+  utter_what_is_node:
+    - text: "A node represents a physical or logical unit within a domain that hosts one or more sensors. Each domain comprises multiple nodes, and each node serves as the container or host for the sensors responsible for collecting specific data."
+
+  utter_what_is_sensortype:
+    - text: "A sensor type defines a sensor's category or function based on the data it measures (e.g., humidity, motion). ctOP supports integrating multiple sensor types based on the user's approved domain."
+
+  utter_delete_domain:
+    - text: "Domain deletion authority only lies with the admin"
+
+  utter_delete_node:
+    - text: "Node deletion authority only lies with the admin"
+
+  utter_delete_sensor:
+    - text: "Sensor deletion authority only lies with the admin"
+
+  utter_goodbye:
+    - text: "Bye. Have a great day!"
+    - text: "Goodbye. Have a nice day"
+    - text: "Bye. See you soon. Hope your day goes well!"
+    - text: "Take care and have a great day ahead!"
+
+  utter_oos:
+    - text: "Sorry, I'm not able to help with that."
+
+  utter_ask_limitations:
+    - text: "Currently ctOP is in testing phase, will get back to you on that soon."
+  utter_vendor_access:
+    - text: "Vendors can create and manage sensor types, data postings, and nodes within their scope. They can also request Admin approval for Vendor Operator accounts and vertical updates."
+  utter_vendor_operator_access:
+    - text: "Vendor Operators have read access to verticals, sensor types, nodes, and user information within their assigned scope. They can also create and view data postings, operating with restricted system access."
+  utter_admin_access:
+    - text: "The Admin holds the highest system access. They can manage Vendor requests, have full CRUD (create, read, update, delete) privileges across all platform data, ensuring complete oversight and control."
+  utter_creation_limit:
+    - text: "Kindly contact the admin to discuss about creation limits."
+  utter_ask_iudx:
+    - text: "The Indian Urban Data Exchange (IUDX) is a secure, interoperable platform for seamless data sharing among urban stakeholders. It enables cities, utilities, and service providers to publish, discover, and consume real-time and historical data (especially from IoT devices) via standardized APIs."
+  utter_ask_data_models:
+    - text: "A data model provides a structured view of a domain by defining its key parameters, data types, and constraints."
+  utter_edit_domain:
+    - text: "Vendors are authorized to update domain information. Kindly visit the 'Domains' page to edit a domain."
+  utter_edit_node:
+    - text: "Neither vendors nor vendor operators can edit deployed nodes. These are centrally managed by the admin for consistency, data integrity, and security. Please contact the admin for changes."
+  utter_edit_sensor:
+    - text: "Neither vendors nor vendor operators can edit deployed sensors. These are centrally managed by the admin for consistency, data integrity, and security. Please contact the admin for changes."
+
+
+  utter_help_menu:
+    - text: "I'm having trouble understanding. Here are some topics I can help you with:"
+      buttons:
+        - title: "Getting Started (ctOP, SCRC, IIITH)"
+          payload: '/help_menu_selected{"help_topic": "getting_started"}'
+        - title: "Platform Features & Analytics"
+          payload: '/help_menu_selected{"help_topic": "features"}'
+        - title: "Node & Sensor Management"
+          payload: '/help_menu_selected{"help_topic": "management"}'
+        - title: "Security & Access Control"
+          payload: '/help_menu_selected{"help_topic": "security"}'
+        - title: "General Questions"
+          payload: '/help_menu_selected{"help_topic": "general"}'
+        - title: "Contact Support"
+          payload: '/contact_admin'
+
+  utter_help_getting_started:
+    - text: "I can help with getting started! Try asking:\n• What is ctOP?\n• Tell me about SCRC\n• What is IIITH?\n• How do I get started?\n• Is this platform paid?"
+
+  utter_help_features:
+    - text: "I can explain platform features. Try asking:\n• What are the features?\n• Tell me about analytics\n• Show me a demo\n• What domains are supported?\n• Tell me about alerts"
+
+  utter_help_management:
+    - text: "I can help with managing your setup. Try asking:\n• How to add a node\n• How to delete sensors\n• How to edit existing domains\n• What is a domain?"
+
+  utter_help_security:
+    - text: "I can answer security questions. Try asking:\n• How secure is the platform?\n• What user types are available?\n• Vendor access permissions\n• Admin access control\n• Who can use this platform?"
+
+  utter_help_general:
+    - text: "I can answer general questions. Try asking:\n• Who are you?\n• Who made ctOP?\n• What is IUDX?\n• What are data models?\n• How does onboarding work?"
+
+  utter_navigation_cancelled:
+  - text: "Navigation cancelled. Is there anything else I can help you with?"
+
+  utter_authentication_required:
+  - text: "Please log in first to access analytics views. You need to be authenticated to navigate to these pages."
+
+
+
+actions:
+  - action_recommend_faqs
+  - action_handle_escalated_fallback
+  - action_reset_fallback_counter
+  - action_handle_help_selection
+  - action_request_node_navigation_confirmation
+  - action_request_sensor_navigation_confirmation
+  - action_navigate_to_node_analytics
+  - action_navigate_to_sensor_analytics
+  - action_request_node_selection
+  - action_request_sensor_type_selection
+  - action_list_available_nodes
+  - action_list_available_sensor_types
+
+entities:
+  - help_topic
+  - node_name
+  - sensor_type
+
+
+slots:
+  last_recommendations:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+        initial_value: []
+
+  consecutive_fallbacks:
+    type: float
+    initial_value: 0.0
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  pending_node_name:
+    type: text
+    mappings:
+    - type: custom
+  pending_sensor_type:
+    type: text
+    mappings:
+    - type: custom
+  confirmation_id:
+    type: text
+    mappings:
+    - type: custom
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
