@@ -2,11 +2,8 @@
 
 recipe: default.v1
 
-# Language setting for NLU
 language: en
 
-# Unique identifier for this assistant project
-# Replace this default value with your own unique assistant name for deployment
 assistant_id: 20250531-104328-grizzled-vector
 
 log_level: DEBUG
